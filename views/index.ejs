@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- ============ head ============ -->
+    <%- include ('./partials/head.ejs') %>
+</head>
+  <body>
+    <header>
+        <h1>Index</h1>
+            <!-- <p>don't budge on your savings</p><br> -->
+            <div class="btn-container">
+                <form class="" action="/new">
+                    <button type="submit" >ADD NEW</button>
+                </form>
+            </div>
+    </header>
+    <div class="budgets">
+        <% for (let i = 0; i < budgets.length; i++) { %>
+            <div class="monthly">
+                <a href="/<%=budgets[i].id%>">
+                    <h3><%=budgets[i].month%> <%=budgets[i].year%> </h3>
+                </a>
+            </div>
+        <% } %>
+    </div>
+  </body>
+</html>

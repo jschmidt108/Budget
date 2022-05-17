@@ -1,0 +1,57 @@
+/* general elements  */
+h1 {
+    font-size: 3em;
+    display: inline-block;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #cccfc9;
+}
+
+/* index header  */
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 75px;
+}
+
+.btn-container {
+    width: 90%;
+    margin: auto;
+    display:flex;
+    justify-content: flex-end;
+}  
+
+/* index content  */
+.budgets {
+    display: flex;
+    /* background-color: #e9ece5; */
+    width: 90%;
+    margin: auto;
+    overflow: scroll;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 250px;
+}
+
+
+.monthly {
+    color: white;
+    /* background-color: #b3c2bf; */
+    background-color: #e5e6ec;
+    padding: .5em;
+    margin: .3em;
+    flex-basis: 1em;
+    text-align: center;
+}
+
+.monthly:hover {
+    flex-grow: .75;
+}
+
+
