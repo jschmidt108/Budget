@@ -55,3 +55,17 @@ header {
 }
 
 
+/* new content  */
+
+.new {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    height: 75px;
+}
+
+.inputs {
+    
+}
+
+
