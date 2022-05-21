@@ -5,19 +5,20 @@
     <%- include ('./partials/head.ejs') %>
 </head>
   <body>
-    <header>
-        <h1>SHOW</h1>
-            <div class="btn-container">
-                <form class="" action="/">
-                    <button type="submit" >BACK</button>
-                </form>
-            </div>
-    </header> <br><br>
-    <div class="budgetContainer">
+    <div class="container">
+        <header>
+            <h1><%=budget.month%> <%=budget.year%> </h1>
+                <div class="btn-container">
+                    <form class="" action="/">
+                        <button type="submit" >BACK</button>
+                    </form>
+                </div>
+        </header> <br><br>
 
-        <h2>Income</h2>
-        <h3>Monthly Earnings</h3>
-        <div class="income card">
+        <div class="budgetContainer">
+            <h2>Income</h2>
+            <h3>Earnings</h3>
+            <div class="income card">
             <table>
                 <tr>
                     <td>Income</td>
@@ -40,11 +41,11 @@
                     <td><%=budget.otherIncome%></td>
                 </tr>
             </table>
-        </div> <br> <br>
+            </div> <br> <br>
 
-        <h2>Expenses</h2>
-        <h3>Home Expenses</h3>
-        <div class="exp card">
+            <h2>Expenses</h2>
+            <h3>Home Expenses</h3>
+            <div class="exp card">
             <table>
                 <tr>
                     <td>Mortgage</td>
@@ -71,9 +72,10 @@
                     <td><%=budget.otherHome%></td>
                 </tr>
             </table>
-        </div>
-        <h3>Living Expenses</h3>
-        <div class="exp card">
+            </div>
+
+            <h3>Living Expenses</h3>
+            <div class="exp card">
             <table>
                 <tr>
                     <td>Groceries</td>
@@ -92,9 +94,10 @@
                     <td><%=budget.otherLiving%></td>
                 </tr>
             </table>
-        </div>
-        <h3>Personal Expenses</h3>
-        <div class="exp card">
+            </div>
+
+            <h3>Personal Expenses</h3>
+            <div class="exp card">
             <table>
                 <tr>
                     <td>Dining Out</td>
@@ -121,9 +124,10 @@
                     <td><%=budget.otherPersonal%></td>
                 </tr>
             </table>
-        </div>
-        <h3>Technology Expenses</h3>
-        <div class="exp card">
+            </div>
+
+            <h3>Technology Expenses</h3>
+            <div class="exp card">
             <table>
                 <tr>
                     <td>Phone bill</td>
@@ -146,9 +150,10 @@
                     <td><%=budget.otherTech%></td>
                 </tr>
             </table>
-        </div>
-        <h3>Transportation Expenses</h3>
-        <div class="exp card">
+            </div>
+
+            <h3>Transportation Expenses</h3>
+            <div class="exp card">
             <table>
                 <tr>
                     <td>Car</td>
@@ -171,9 +176,10 @@
                     <td><%=budget.otherTrans%></td>
                 </tr>
             </table>
-        </div>
-        <h3>Health Expenses</h3>
-        <div class="exp card">
+            </div>
+
+            <h3>Health Expenses</h3>
+            <div class="exp card">
             <table>
                 <tr>
                     <td>Insurance</td>
@@ -192,7 +198,10 @@
                     <td><%=budget.otherHealth%></td>
                 </tr>
             </table>
+            </div>
         </div>
+        <!-- ============ JS CDN ============ -->
+        <%- include ('./partials/cdn.ejs') %>
     </div>
   </body>
 </html>

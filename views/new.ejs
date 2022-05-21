@@ -5,146 +5,152 @@
     <%- include ('./partials/head.ejs') %>
 </head>
   <body>
-    <header>
-        <h1>NEW</h1>
-            <div class="btn-container">
-                <form class="" action="/">
-                    <button type="submit" >BACK</button>
-                </form>
-            </div>
-    </header> <br><br>
-    <div class="new">
-        <form action="/" method="POST">
-            <!-- basic info -->
-            <div class="category">
-                <h3>Basic Information</h3>
-            </div>
-            <div class="inputs">
-                <div class="six columns">
-                    <label for="exampleRecipientInput">Month:</label>
-                    <select class="u-full-width" id="exampleRecipientInput">
-                      <option value="Option 1">January</option>
-                      <option value="Option 2">February</option>
-                      <option value="Option 3">March</option>
-                      <option value="Option 4">April</option>
-                      <option value="Option 5">May</option>
-                      <option value="Option 6">June</option>
-                      <option value="Option 7">July</option>
-                      <option value="Option 8">August</option>
-                      <option value="Option 9">September</option>
-                      <option value="Option 10">October</option>
-                      <option value="Option 11">November</option>
-                      <option value="Option 12">December</option>
-                    </select>
-                  </div>
-                  <div class="six columns">
-                    <label for="exampleRecipientInput">Year:</label>
-                    <select class="u-full-width" id="exampleRecipientInput">
-                      <option value="Option 1">2010</option>
-                      <option value="Option 2">2011</option>
-                      <option value="Option 3">2012</option>
-                      <option value="Option 4">2013</option>
-                      <option value="Option 5">2014</option>
-                      <option value="Option 6">2015</option>
-                      <option value="Option 7">2016</option>
-                      <option value="Option 8">2017</option>
-                      <option value="Option 9">2018</option>
-                      <option value="Option 10">2019</option>
-                      <option value="Option 11">2020</option>
-                      <option value="Option 12">2021</option>
-                      <option value="Option 13">2022</option>
-                    </select>
-                  </div>
-            </div> <br>
+      <div class="container">
+        <header>
+            <h1>NEW</h1>
+                <div class="btn-container">
+                    <form class="" action="/">
+                        <button type="submit" >BACK</button>
+                    </form>
+                </div>
+        </header> <br><br>
+        <div class="new">
+            <form action="/" method="POST">
+                <!-- basic info -->
+                <div class="category">
+                    <h3>Basic Information</h3>
+                </div>
+                <div class="inputs">
+                    <div class="six columns">
+                        <label for="exampleRecipientInput">Month:</label>
+                            <select class="u-full-width" id="exampleRecipientInput">
+                                <option value="Option 1">January</option>
+                                <option value="Option 2">February</option>
+                                <option value="Option 3">March</option>
+                                <option value="Option 4">April</option>
+                                <option value="Option 5">May</option>
+                                <option value="Option 6">June</option>
+                                <option value="Option 7">July</option>
+                                <option value="Option 8">August</option>
+                                <option value="Option 9">September</option>
+                                <option value="Option 10">October</option>
+                                <option value="Option 11">November</option>
+                                <option value="Option 12">December</option>
+                            </select>
+                    </div>
 
-            <!-- income -->
-            <div class="category">
-                <h3>Income</h3>
-            </div>
-            <div class="inputs">
-                <input type="number" name="income" placeholder="Salary/Wages/Tips">
-                <input type="number" name="image" placeholder="Commissions"><br>
-                <input type="number" name="synopsis" placeholder="Bonus">
-                <input type="number" name="tags" placeholder="Gifts"><br>
-                <input type="number" name="otherIncome" placeholder="Other Income"><br><br>
-            </div>
+                    <div class="six columns">
+                        <label for="exampleRecipientInput">Year:</label>
+                            <select class="u-full-width" id="exampleRecipientInput">
+                                <option value="Option 1">2010</option>
+                                <option value="Option 2">2011</option>
+                                <option value="Option 3">2012</option>
+                                <option value="Option 4">2013</option>
+                                <option value="Option 5">2014</option>
+                                <option value="Option 6">2015</option>
+                                <option value="Option 7">2016</option>
+                                <option value="Option 8">2017</option>
+                                <option value="Option 9">2018</option>
+                                <option value="Option 10">2019</option>
+                                <option value="Option 11">2020</option>
+                                <option value="Option 12">2021</option>
+                                <option value="Option 13">2022</option>
+                            </select>
+                    </div>
+                </div> <br>
 
-            <!-- home expenses -->
-            <div class="category">
-                <h3>Home Expenses</h3>
-            </div>
-            <div class="inputs">
-                <input type="number" name="mortgage" placeholder="Mortgage"><br>
-                <input type="number" name="rent" placeholder="Rent"><br>
-                <input type="number" name="utilities" placeholder="Utilities"><br>
-                <input type="number" name="maintenance" placeholder="Maintenance"><br>
-                <input type="number" name="improvements" placeholder="Household Improvements"><br>
-                <input type="number" name="otherHome" placeholder="Other Home Expenses"><br><br>
-            </div>
+                <!-- income -->
+                <div class="category">
+                    <h3>Income</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="income" placeholder="Salary/Wages/Tips">
+                    <input type="number" name="image" placeholder="Commissions"><br>
+                    <input type="number" name="synopsis" placeholder="Bonus">
+                    <input type="number" name="tags" placeholder="Gifts"><br>
+                    <input type="number" name="otherIncome" placeholder="Other Income"><br><br>
+                </div>
 
-            <!-- living expenses -->
-            <div class="category">
-                <h3>Living Expenses</h3>
-            </div>
-            <div class="inputs">
-                <input type="number" name="groceries" placeholder="Groceries"><br>
-                <input type="number" name="laundry" placeholder="Laundry"><br>
-                <input type="number" name="medical" placeholder="Medical"><br>
-                <input type="number" name="otherLiving" placeholder="Other Living Expenses"><br><br>
-            </div>
+                <!-- home expenses -->
+                <div class="category">
+                    <h3>Home Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="mortgage" placeholder="Mortgage"><br>
+                    <input type="number" name="rent" placeholder="Rent"><br>
+                    <input type="number" name="utilities" placeholder="Utilities"><br>
+                    <input type="number" name="maintenance" placeholder="Maintenance"><br>
+                    <input type="number" name="improvements" placeholder="Household Improvements"><br>
+                    <input type="number" name="otherHome" placeholder="Other Home Expenses"><br><br>
+                </div>
 
-            <!-- personal expenses -->
-            <div class="category">
-                <h3>Personal Expenses</h3>
-            </div>
-            <div class="inputs">
-                <input type="number" name="dining" placeholder="Dining Out"><br>
-                <input type="number" name="salon" placeholder="Salon"><br>
-                <input type="number" name="clothing" placeholder="Clothing"><br>
-                <input type="number" name="events" placeholder="Events & Tickets"><br>
-                <input type="number" name="vacation" placeholder="Vacation"><br>
-                <input type="number" name="otherPersonal" placeholder="Other Personal Expenses"><br><br>
-            </div>
+                <!-- living expenses -->
+                <div class="category">
+                    <h3>Living Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="groceries" placeholder="Groceries"><br>
+                    <input type="number" name="laundry" placeholder="Laundry"><br>
+                    <input type="number" name="medical" placeholder="Medical"><br>
+                    <input type="number" name="otherLiving" placeholder="Other Living Expenses"><br><br>
+                </div>
 
-            <!-- tech expenses -->
-            <div class="category">
-                <h3>Tech Expenses</h3>
-            </div>
-            <div class="inputs">
-                <input type="number" name="phone" placeholder="Phone"><br>
-                <input type="number" name="wifi" placeholder="Wifi"><br>
-                <input type="number" name="cable" placeholder="Cable"><br>
-                <input type="number" name="streaming" placeholder="Streaming"><br>
-                <input type="number" name="otherTech" placeholder="Other Tech Expenses"><br><br>
-            </div>
+                <!-- personal expenses -->
+                <div class="category">
+                    <h3>Personal Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="dining" placeholder="Dining Out"><br>
+                    <input type="number" name="salon" placeholder="Salon"><br>
+                    <input type="number" name="clothing" placeholder="Clothing"><br>
+                    <input type="number" name="events" placeholder="Events & Tickets"><br>
+                    <input type="number" name="vacation" placeholder="Vacation"><br>
+                    <input type="number" name="otherPersonal" placeholder="Other Personal Expenses"><br><br>
+                </div>
 
-            <!-- transportation expenses -->
-            <div class="category">
-                <h3>Transportation Expenses</h3>
-            </div>
-            <div class="inputs">
-                <input type="number" name="car" placeholder="Car"><br>
-                <input type="number" name="fuel" placeholder="Fuel"><br>
-                <input type="number" name="public" placeholder="Public Transportation"><br>
-                <input type="number" name="taxi" placeholder="Taxi, Uber, Lyft"><br>
-                <input type="number" name="otherTrans" placeholder="Other Transportation Expenses"><br><br>
-            </div>
+                <!-- tech expenses -->
+                <div class="category">
+                    <h3>Tech Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="phone" placeholder="Phone"><br>
+                    <input type="number" name="wifi" placeholder="Wifi"><br>
+                    <input type="number" name="cable" placeholder="Cable"><br>
+                    <input type="number" name="streaming" placeholder="Streaming"><br>
+                    <input type="number" name="otherTech" placeholder="Other Tech Expenses"><br><br>
+                </div>
 
-            <!-- health expenses -->
-            <div class="category">
-                <h3>Health Expenses</h3>
-            </div>
-            <div class="inputs">
-                <input type="number" name="insurance" placeholder="Insurance"><br>
-                <input type="number" name="pharmacy" placeholder="Pharmacy"><br>
-                <input type="number" name="gym" placeholder="Gym or Health Club Dues"><br>
-                <input type="number" name="otherHealth" placeholder="Other Health Expenses"><br><br>
-            </div>
+                <!-- transportation expenses -->
+                <div class="category">
+                    <h3>Transportation Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="car" placeholder="Car"><br>
+                    <input type="number" name="fuel" placeholder="Fuel"><br>
+                    <input type="number" name="public" placeholder="Public Transportation"><br>
+                    <input type="number" name="taxi" placeholder="Taxi, Uber, Lyft"><br>
+                    <input type="number" name="otherTrans" placeholder="Other Transportation Expenses"><br><br>
+                </div>
 
-            <!-- submit new info -->
-            <input type="submit" value="ADD MONTH">
+                <!-- health expenses -->
+                <div class="category">
+                    <h3>Health Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="insurance" placeholder="Insurance"><br>
+                    <input type="number" name="pharmacy" placeholder="Pharmacy"><br>
+                    <input type="number" name="gym" placeholder="Gym or Health Club Dues"><br>
+                    <input type="number" name="otherHealth" placeholder="Other Health Expenses"><br><br>
+                </div>
 
-          </form>
+                <!-- submit new info -->
+                <input type="submit" value="ADD MONTH">
+
+            </form>
+        </div>
+        
+        <!-- ============ JS CDN ============ -->
+        <%- include ('./partials/cdn.ejs') %>
     </div>
   </body>
 </html>
