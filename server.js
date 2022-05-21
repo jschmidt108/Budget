@@ -110,13 +110,13 @@ app.get('/new', (req, res) => {
 // });
 
 // SHOW => GET
-// app.get('/:id', (req, res) => {
-//     Budget.findById(req.params.id, (err, foundBudget) => {
-//         res.render('show.ejs', {
-//             budget: foundBudget
-//         });
-//     });
-// });
+app.get('/:id', (req, res) => {
+    Budget.findById(req.params.id, (err, foundBudget) => {
+        res.render('show.ejs', {
+            budget: foundBudget
+        });
+    });
+});
 
 
 // UPDATE => PUT
