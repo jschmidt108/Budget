@@ -8,53 +8,53 @@ const budgetSchema = new Schema ({
   year: Number,
 
   // income
-  income: Number,
-  commissions: Number,
-  bonus: Number,
-  gifts: Number,
-  otherIncome: Number,
+  income: {type:Number, default: 0},
+  commissions: {type:Number, default: 0},
+  bonus: {type:Number, default: 0},
+  gifts: {type:Number, default: 0},
+  otherIncome: {type:Number, default: 0},
 
   // home expenses
-  mortgage: Number,
-  rent: Number,
-  utilities: Number,
-  maintenance: Number,
-  improvements: Number,
-  otherHome: Number,
+  mortgage: {type:Number, default: 0},
+  rent: {type:Number, default: 0},
+  utilities: {type:Number, default: 0},
+  maintenance: {type:Number, default: 0},
+  improvements: {type:Number, default: 0},
+  otherHome: {type:Number, default: 0},
 
   // living expenses
-  groceries: Number,
-  laundry: Number,
-  medical: Number,
-  otherLiving: Number,
+  groceries: {type:Number, default: 0},
+  laundry: {type:Number, default: 0},
+  medical: {type:Number, default: 0},
+  otherLiving: {type:Number, default: 0},
 
   // personal expenses
-  dining: Number,
-  salon: Number,
-  clothing: Number,
-  events: Number, 
-  vacation: Number,
-  otherPersonal: Number,
+  dining: {type:Number, default: 0},
+  salon: {type:Number, default: 0},
+  clothing: {type:Number, default: 0},
+  events: {type:Number, default: 0},
+  vacation: {type:Number, default: 0},
+  otherPersonal: {type:Number, default: 0},
 
   // tech expenses
-  phone: Number, 
-  wifi: Number,
-  cable: Number, 
-  streaming: Number,
-  otherTech: Number,
+  phone: {type:Number, default: 0},
+  wifi: {type:Number, default: 0},
+  cable: {type:Number, default: 0},
+  streaming: {type:Number, default: 0},
+  otherTech: {type:Number, default: 0},
 
   // transportation
-  car: Number,
-  fuel: Number,
-  public: Number,
-  taxi: Number,
-  otherTrans: Number,
+  car: {type:Number, default: 0},
+  fuel: {type:Number, default: 0},
+  public: {type:Number, default: 0},
+  taxi: {type:Number, default: 0},
+  otherTrans: {type:Number, default: 0},
 
   // health 
-  insurance: Number, 
-  pharmacy: Number,
-  gym: Number,
-  otherHealth: Number,
+  insurance: {type:Number, default: 0},
+  pharmacy: {type:Number, default: 0},
+  gym: {type:Number, default: 0},
+  otherHealth: {type:Number, default: 0},
   
 })
 
