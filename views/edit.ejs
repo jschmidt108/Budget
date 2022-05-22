@@ -9,16 +9,10 @@
         <nav class="navbar fixed-top navbar-expand-lg bg-light">
          <!-- ============ nav ============ -->
         <%- include ('./partials/nav.ejs') %>
-        </nav><br><br><br><br>
-        <div class="budgets">
-            <% for (let i = 0; i < budgets.length; i++) { %>
-                <div class="monthly">
-                    <a href="/<%=budgets[i].id%>">
-                        <h3><%=budgets[i].month%> <%=budgets[i].year%> </h3>
-                    </a>
-                </div>
-            <% } %>
-        </div>
+        </nav>
+        <header>
+            <h1>EDIT</h1>
+        </header>
         <!-- ============ JS CDN ============ -->
         <%- include ('./partials/cdn.ejs') %>
     </div>

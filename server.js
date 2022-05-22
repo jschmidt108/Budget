@@ -101,13 +101,13 @@ app.get('/new', (req, res) => {
 });
 
 // EDIT => GET
-// app.get('/edit/:id', (req, res) => {
-//     Budget.findById(req.params.id, (err, foundBudget) => {
-//         res.render('edit.ejs', {
-//             budget: foundBudget
-//         });
-//     });
-// });
+app.get('/edit/:id', (req, res) => {
+    Budget.findById(req.params.id, (err, foundBudget) => {
+        res.render('edit.ejs', {
+            budget: foundBudget
+        });
+    });
+});
 
 // SHOW => GET
 app.get('/:id', (req, res) => {

@@ -6,11 +6,19 @@
 </head>
   <body>
     <div class="container">
-        <header>
-        </header> <br><br>
+        <nav class="navbar fixed-top navbar-expand-lg bg-light">
+            <!-- ============ nav ============ -->
+           <%- include ('./partials/nav.ejs') %>
+        </nav><br><br><br><br>
         <div class="row">
             <div class="col-sm-4"><%=budget.month%> <%=budget.year%> </div>
-            <div class="col-sm-8"></div>
+            <div class="col-sm-8">
+                <div class="btn-container">
+                    <form class="" action="/">
+                        <button type="submit" >EDIT</button>
+                    </form>
+                </div>
+            </div>
         </div><br>
 
         <div class="budgetContainer">

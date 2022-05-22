@@ -14,7 +14,7 @@ button:hover {
 
 /* index header  */
 
-.row {
+.col-sm-4 {
     font-size: 2em;
 }
 header {
