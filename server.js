@@ -74,6 +74,7 @@ app.get('/seed', (req, res) => {
 //___________________
 //localhost:3000
 
+
 // CREATE => POST
 app.post('/', (req,res) => {
     Budget.create(req.body, (error, createdBudget) => {
@@ -86,6 +87,8 @@ app.post('/', (req,res) => {
     })
 })
 
+
+
 // INDEX => GET
 app.get('/' , (req, res) => {
     Budget.find({}, (error, allBudgets) => {
@@ -95,19 +98,20 @@ app.get('/' , (req, res) => {
     });
 });
 
+
 // NEW => GET
 app.get('/new', (req, res) => {
     res.render('new.ejs')
 });
 
 // EDIT => GET
-app.get('/edit/:id', (req, res) => {
-    Budget.findById(req.params.id, (err, foundBudget) => {
-        res.render('edit.ejs', {
-            budget: foundBudget
-        });
-    });
-});
+// app.get('/edit/:id', (req, res) => {
+//     Budget.findById(req.params.id, (err, foundBudget) => {
+//         res.render('edit.ejs', {
+//             budget: foundBudget
+//         });
+//     });
+// });
 
 // SHOW => GET
 app.get('/:id', (req, res) => {
@@ -119,20 +123,21 @@ app.get('/:id', (req, res) => {
 });
 
 
+
 // UPDATE => PUT
 // app.put('/:id', (req, res) => {
-//     Budget.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedReview) => {
-//         // console.log(updatedReview)
+//     Budget.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedBudget) => {
+//         // console.log(updatedBudget)
 //         res.redirect('/')
 //     });
 // });
 
 // DESTROY => DELETE
-// app.delete('/:id', (req, res) => {
-//     Budget.findByIdAndRemove(req.params.id, (err, deleteBudget) => {
-//         res.redirect('/')
-//     });
-// });
+app.delete('/:id', (req, res) => {
+    Budget.findByIdAndRemove(req.params.id, (err, deleteBudget) => {
+        res.redirect('/')
+    });
+});
 
 
 

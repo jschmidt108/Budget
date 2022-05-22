@@ -14,7 +14,7 @@
             <div class="col-sm-4"><%=budget.month%> <%=budget.year%> </div>
             <div class="col-sm-8">
                 <div class="btn-container">
-                    <form class="" action="/">
+                    <form class="" action="#">
                         <button type="submit" >EDIT</button>
                     </form>
                 </div>
@@ -207,8 +207,8 @@
             </div><br>
         </div>
         <div class="btn-container">
-            <form class="" action="/">
-                <button type="submit" >BACK</button>
+            <form action="/<%=budget.id%>?_method=DELETE" method="POST">
+                <button type="submit">DELETE</button>
             </form>
         </div>
         <!-- ============ JS CDN ============ -->
