@@ -15,7 +15,7 @@
             <div class="col-sm-8">
                 <div class="btn-container">
                     <form class="" action="/<%=budget.id%>">
-                        <button type="submit" >BACK</button>
+                        <button type="submit" class="btn btn-outline-primary">BACK</button>
                     </form>
                 </div>
             </div>
@@ -25,10 +25,9 @@
                 <div class="budgetContainer">
                     <h2>Income</h2>
                     <h3>Earnings</h3>
-                    <div class="income card">
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <td>Income</td>
+                            <td width="90%">Income</td>
                             <td><input type="number" name="income" value="<%=budget.income%>"></td>
                         </tr>
                         <tr>
@@ -47,15 +46,13 @@
                             <td>Other Income</td>
                             <td><input type="number" name="otherIncome" value="<%=budget.otherIncome%>"></td>
                         </tr>
-                    </table>
-                    </div> <br> <br>
+                    </table> <br> <br>
         
                     <h2>Expenses</h2>
                     <h3>Home Expenses</h3>
-                    <div class="exp card">
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <td>Mortgage</td>
+                            <td width="90%">Mortgage</td>
                             <td><input type="number" name="mortgage" value="<%=budget.mortgage%>"></td>
                         </tr>
                         <tr>
@@ -78,14 +75,12 @@
                             <td>Other Home Expenses</td>
                             <td><input type="number" name="otherHome" value="<%=budget.otherHome%>"></td>
                         </tr>
-                    </table>
-                    </div><br>
+                    </table> <br>
         
                     <h3>Living Expenses</h3>
-                    <div class="exp card">
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <td>Groceries</td>
+                            <td width="90%">Groceries</td>
                             <td><input type="number" name="groceries" value="<%=budget.groceries%>"></td>
                         </tr>
                         <tr>
@@ -100,14 +95,12 @@
                             <td>Other Living Expenses</td>
                             <td><input type="number" name="otherLiving" value="<%=budget.otherLiving%>"></td>
                         </tr>
-                    </table>
-                    </div><br>
+                    </table> <br>
         
                     <h3>Personal Expenses</h3>
-                    <div class="exp card">
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <td>Dining Out</td>
+                            <td width="90%">Dining Out</td>
                             <td><input type="number" name="dining" value="<%=budget.dining%>"></td>
                         </tr>
                         <tr>
@@ -130,14 +123,12 @@
                             <td>Other Personal Expenses</td>
                             <td><input type="number" name="otherPersonal" value="<%=budget.otherPersonal%>"></td>
                         </tr>
-                    </table>
-                    </div><br>
+                    </table> <br>
         
                     <h3>Technology Expenses</h3>
-                    <div class="exp card">
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <td>Phone bill</td>
+                            <td width="90%">Phone bill</td>
                             <td><input type="number" name="phone" value="<%=budget.phone%>"></td>
                         </tr>
                         <tr>
@@ -156,14 +147,12 @@
                             <td>Other Tech Expenses</td>
                             <td><input type="number" name="otherTech" value="<%=budget.otherTech%>"></td>
                         </tr>
-                    </table>
-                    </div><br>
+                    </table> <br>
         
                     <h3>Transportation Expenses</h3>
-                    <div class="exp card">
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <td>Car</td>
+                            <td width="90%">Car</td>
                             <td><input type="number" name="car" value="<%=budget.car%>"></td>
                         </tr>
                         <tr>
@@ -182,14 +171,12 @@
                             <td>Other Transportation Expenses</td>
                             <td><input type="number" name="otherTrans" value="<%=budget.otherTrans%>"></td>
                         </tr>
-                    </table>
-                    </div><br>
+                    </table> <br>
         
                     <h3>Health Expenses</h3>
-                    <div class="exp card">
-                    <table>
+                    <table class="table table-hover">
                         <tr>
-                            <td>Insurance</td>
+                            <td width="90%">Insurance</td>
                             <td><input type="number" name="insurance" value="<%=budget.insurance%>"></td>
                         </tr>
                         <tr>
@@ -204,12 +191,12 @@
                             <td>Other Health Expenses</td>
                             <td><input type="number" name="otherHealth" value="<%=budget.otherHealth%>"></td>
                         </tr>
-                    </table>
-                    </div><br>
+                    </table> 
+
                 </div>
 
-                <!-- submit new info -->
-                <input type="submit" value="UPDATE">
+                <!-- submit updates -->
+                <button type="submit" class="btn btn-outline-primary">UPDATE</button>
 
             </form>
         </div>

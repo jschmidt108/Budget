@@ -5,18 +5,13 @@
     <%- include ('./partials/head.ejs') %>
 </head>
   <body>
-    <div class="container">
+      <div class="container">
         <nav class="navbar fixed-top navbar-expand-lg bg-light">
             <!-- ============ nav ============ -->
            <%- include ('./partials/nav.ejs') %>
         </nav><br><br><br><br>
-        <div class="row">
-            <div class="col-sm-4"><%=budget.month%> <%=budget.year%> </div>
-            <div class="col-sm-8">
-            </div>
-        </div><br>
         <div class="new">
-            <form action="/<%=budget.id%>?_method=PUT" method="POST">
+            <form action="/" method="POST">
                 <!-- basic info -->
                 <div class="category">
                     <h3>Basic Information</h3>
@@ -24,7 +19,7 @@
                 <div class="inputs">
                     <div class="six columns">
                         <label for="exampleRecipientInput">Month:</label>
-                            <select name="month" class="u-full-width" id="exampleRecipientInput" value="<%=budget.month%>">
+                            <select name="month" class="u-full-width" id="exampleRecipientInput">
                                 <option value="January">January</option>
                                 <option value="February">February</option>
                                 <option value="March">March</option>
@@ -38,20 +33,20 @@
                                 <option value="November">November</option>
                                 <option value="December">December</option>
                             </select> <br>
-                        Year: <input type="number" name="year" value="<%=budget.year%>">
+                        Year: <input type="number" name="year">
                     </div>
                 </div> <br>
 
                 <!-- income -->
                 <div class="category">
-                    <h3>Earnings</h3>
+                    <h3>Income</h3>
                 </div>
                 <div class="inputs">
-                    Income: <input type="number" name="income" value="<%=budget.income%>">
-                    Commissions: <input type="number" name="commissions" value="<%=budget.commissions%>">
-                    Bonus:<input type="number" name="bonus" value="<%=budget.bonus%>">
-                    Gifts:<input type="number" name="gifts" value="<%=budget.gifts%>">
-                    Other Income:<input type="number" name="otherIncome" value="<%=budget.otherIncome%>"><br><br>
+                    <input type="number" name="income" placeholder="Salary/Wages/Tips">
+                    <input type="number" name="commissions" placeholder="Commissions">
+                    <input type="number" name="bonus" placeholder="Bonus">
+                    <input type="number" name="gifts" placeholder="Gifts">
+                    <input type="number" name="otherIncome" placeholder="Other Income"><br><br>
                 </div>
 
                 <!-- home expenses -->
@@ -59,12 +54,12 @@
                     <h3>Home Expenses</h3>
                 </div>
                 <div class="inputs">
-                    <input type="number" name="mortgage" value="<%=budget.mortgage%>"><br>
-                    <input type="number" name="rent" value="<%=budget.rent%>"><br>
-                    <input type="number" name="utilities" value="<%=budget.utilities%>"><br>
-                    <input type="number" name="maintenance" value="<%=budget.maintenance%>">
-                    <input type="number" name="improvements" value="<%=budget.improvements%>">
-                    <input type="number" name="otherHome" value="<%=budget.otherHome%>">
+                    <input type="number" name="mortgage" placeholder="Mortgage">
+                    <input type="number" name="rent" placeholder="Rent">
+                    <input type="number" name="utilities" placeholder="Utilities">
+                    <input type="number" name="maintenance" placeholder="Maintenance">
+                    <input type="number" name="improvements" placeholder="Home Improvements">
+                    <input type="number" name="otherHome" placeholder="Other Expenses"><br><br>
                 </div>
 
                 <!-- living expenses -->
@@ -72,10 +67,10 @@
                     <h3>Living Expenses</h3>
                 </div>
                 <div class="inputs">
-                    <input type="number" name="groceries" value="<%=budget.groceries%>">
-                    <input type="number" name="laundry" value="<%=budget.laundry%>">
-                    <input type="number" name="medical" value="<%=budget.medical%>">
-                    <input type="number" name="otherLiving" value="<%=budget.otherLiving%>">
+                    <input type="number" name="groceries" placeholder="Groceries">
+                    <input type="number" name="laundry" placeholder="Laundry">
+                    <input type="number" name="medical" placeholder="Medical">
+                    <input type="number" name="otherLiving" placeholder="Other Expenses"><br><br>
                 </div>
 
                 <!-- personal expenses -->
@@ -83,12 +78,12 @@
                     <h3>Personal Expenses</h3>
                 </div>
                 <div class="inputs">
-                    <input type="number" name="dining" value="<%=budget.dining%>">
-                    <input type="number" name="salon" value="<%=budget.salon%>">
-                    <input type="number" name="clothing" value="<%=budget.clothing%>">
-                    <input type="number" name="events" value="<%=budget.events%>">
-                    <input type="number" name="vacation" value="<%=budget.vacation%>">
-                    <input type="number" name="otherPersonal" value="<%=budget.otherPersonal%>"><br><br>
+                    <input type="number" name="dining" placeholder="Dining Out">
+                    <input type="number" name="salon" placeholder="Salon">
+                    <input type="number" name="clothing" placeholder="Clothing">
+                    <input type="number" name="events" placeholder="Events & Tickets">
+                    <input type="number" name="vacation" placeholder="Vacation">
+                    <input type="number" name="otherPersonal" placeholder="Other Expenses"><br><br>
                 </div>
 
                 <!-- tech expenses -->
@@ -96,11 +91,11 @@
                     <h3>Tech Expenses</h3>
                 </div>
                 <div class="inputs">
-                    <input type="number" name="phone" value="<%=budget.phone%>">
-                    <input type="number" name="wifi" value="<%=budget.wifi%>">
-                    <input type="number" name="cable" value="<%=budget.cable%>">
-                    <input type="number" name="streaming" value="<%=budget.streaming%>">
-                    <input type="number" name="otherTech" value="<%=budget.otherTech%>">
+                    <input type="number" name="phone" placeholder="Phone">
+                    <input type="number" name="wifi" placeholder="Wifi">
+                    <input type="number" name="cable" placeholder="Cable">
+                    <input type="number" name="streaming" placeholder="Streaming">
+                    <input type="number" name="otherTech" placeholder="Other Expenses"><br><br>
                 </div>
 
                 <!-- transportation expenses -->
@@ -108,11 +103,11 @@
                     <h3>Transportation Expenses</h3>
                 </div>
                 <div class="inputs">
-                    <input type="number" name="car" value="<%=budget.car%>">
-                    <input type="number" name="fuel" value="<%=budget.fuel%>">
-                    <input type="number" name="public" value="<%=budget.public%>">
-                    <input type="number" name="taxi" value="<%=budget.taxi%>">
-                    <input type="number" name="otherTrans" value="<%=budget.otherTrans%>">
+                    <input type="number" name="car" placeholder="Car">
+                    <input type="number" name="fuel" placeholder="Fuel">
+                    <input type="number" name="public" placeholder="Public Transportation">
+                    <input type="number" name="taxi" placeholder="Taxi, Uber, Lyft">
+                    <input type="number" name="otherTrans" placeholder="Other Expenses"><br><br>
                 </div>
 
                 <!-- health expenses -->
@@ -120,14 +115,14 @@
                     <h3>Health Expenses</h3>
                 </div>
                 <div class="inputs">
-                    <input type="number" name="insurance" value="<%=budget.insurance%>">
-                    <input type="number" name="pharmacy" value="<%=budget.pharmacy%>">
-                    <input type="number" name="gym" value="<%=budget.gym%>">
-                    <input type="number" name="otherHealth" value="<%=budget.otherHealth%>">
+                    <input type="number" name="insurance" placeholder="Insurance">
+                    <input type="number" name="pharmacy" placeholder="Pharmacy">
+                    <input type="number" name="gym" placeholder="Gym or Health Club Dues">
+                    <input type="number" name="otherHealth" placeholder="Other Expenses"><br><br>
                 </div>
 
                 <!-- submit new info -->
-                <input type="submit" value="UPDATE">
+                <input type="submit" value="ADD MONTH">
 
             </form>
         </div>

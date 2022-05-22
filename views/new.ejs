@@ -5,124 +5,189 @@
     <%- include ('./partials/head.ejs') %>
 </head>
   <body>
-      <div class="container">
+    <div class="container">
         <nav class="navbar fixed-top navbar-expand-lg bg-light">
             <!-- ============ nav ============ -->
            <%- include ('./partials/nav.ejs') %>
         </nav><br><br><br><br>
+
         <div class="new">
             <form action="/" method="POST">
-                <!-- basic info -->
-                <div class="category">
-                    <h3>Basic Information</h3>
-                </div>
-                <div class="inputs">
-                    <div class="six columns">
-                        <label for="exampleRecipientInput">Month:</label>
-                            <select name="month" class="u-full-width" id="exampleRecipientInput">
-                                <option value="January">January</option>
-                                <option value="February">February</option>
-                                <option value="March">March</option>
-                                <option value="April">April</option>
-                                <option value="May">May</option>
-                                <option value="June">June</option>
-                                <option value="July">July</option>
-                                <option value="August">August</option>
-                                <option value="September">September</option>
-                                <option value="October">October</option>
-                                <option value="November">November</option>
-                                <option value="December">December</option>
-                            </select> <br>
-                        Year: <input type="number" name="year">
-                    </div>
-                </div> <br>
-
-                <!-- income -->
-                <div class="category">
-                    <h3>Income</h3>
-                </div>
-                <div class="inputs">
-                    <input type="number" name="income" placeholder="Salary/Wages/Tips">
-                    <input type="number" name="commissions" placeholder="Commissions">
-                    <input type="number" name="bonus" placeholder="Bonus">
-                    <input type="number" name="gifts" placeholder="Gifts">
-                    <input type="number" name="otherIncome" placeholder="Other Income"><br><br>
-                </div>
-
-                <!-- home expenses -->
-                <div class="category">
+                <div class="budgetContainer">
+                    <h2>Income</h2>
+                    <h3>Earnings</h3>
+                    <table class="table table-hover">
+                        <tr>
+                            <td width="90%">Income</td>
+                            <td><input type="number" name="income"></td>
+                        </tr>
+                        <tr>
+                            <td>Commissions</td>
+                            <td><input type="number" name="commissions"></td>
+                        </tr>
+                        <tr>
+                            <td>Bonus</td>
+                            <td><input type="number" name="bonus"></td>
+                        </tr>
+                        <tr>
+                            <td>Gifts</td>
+                            <td><input type="number" name="gifts"></td>
+                        </tr>
+                        <tr>
+                            <td>Other Income</td>
+                            <td><input type="number" name="otherIncome"></td>
+                        </tr>
+                    </table> <br> <br>
+        
+                    <h2>Expenses</h2>
                     <h3>Home Expenses</h3>
-                </div>
-                <div class="inputs">
-                    <input type="number" name="mortgage" placeholder="Mortgage">
-                    <input type="number" name="rent" placeholder="Rent">
-                    <input type="number" name="utilities" placeholder="Utilities">
-                    <input type="number" name="maintenance" placeholder="Maintenance">
-                    <input type="number" name="improvements" placeholder="Home Improvements">
-                    <input type="number" name="otherHome" placeholder="Other Expenses"><br><br>
-                </div>
-
-                <!-- living expenses -->
-                <div class="category">
+                    <table class="table table-hover">
+                        <tr>
+                            <td width="90%">Mortgage</td>
+                            <td><input type="number" name="mortgage"></td>
+                        </tr>
+                        <tr>
+                            <td>Rent</td>
+                            <td><input type="number" name="rent"></td>
+                        </tr>
+                        <tr>
+                            <td>Utilities</td>
+                            <td><input type="number" name="utilities"></td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance</td>
+                            <td><input type="number" name="maintenance"></td>
+                        </tr>
+                        <tr>
+                            <td>Improvements</td>
+                            <td><input type="number" name="improvements"></td>
+                        </tr>
+                        <tr>
+                            <td>Other Home Expenses</td>
+                            <td><input type="number" name="otherHome"></td>
+                        </tr>
+                    </table> <br>
+        
                     <h3>Living Expenses</h3>
-                </div>
-                <div class="inputs">
-                    <input type="number" name="groceries" placeholder="Groceries">
-                    <input type="number" name="laundry" placeholder="Laundry">
-                    <input type="number" name="medical" placeholder="Medical">
-                    <input type="number" name="otherLiving" placeholder="Other Expenses"><br><br>
-                </div>
-
-                <!-- personal expenses -->
-                <div class="category">
+                    <table class="table table-hover">
+                        <tr>
+                            <td width="90%">Groceries</td>
+                            <td><input type="number" name="groceries"></td>
+                        </tr>
+                        <tr>
+                            <td>Laundry</td>
+                            <td><input type="number" name="laundry"></td>
+                        </tr>
+                        <tr>
+                            <td>Medical Expenses</td>
+                            <td><input type="number" name="medical"></td>
+                        </tr>
+                        <tr>
+                            <td>Other Living Expenses</td>
+                            <td><input type="number" name="otherLiving"></td>
+                        </tr>
+                    </table> <br>
+        
                     <h3>Personal Expenses</h3>
-                </div>
-                <div class="inputs">
-                    <input type="number" name="dining" placeholder="Dining Out">
-                    <input type="number" name="salon" placeholder="Salon">
-                    <input type="number" name="clothing" placeholder="Clothing">
-                    <input type="number" name="events" placeholder="Events & Tickets">
-                    <input type="number" name="vacation" placeholder="Vacation">
-                    <input type="number" name="otherPersonal" placeholder="Other Expenses"><br><br>
-                </div>
-
-                <!-- tech expenses -->
-                <div class="category">
-                    <h3>Tech Expenses</h3>
-                </div>
-                <div class="inputs">
-                    <input type="number" name="phone" placeholder="Phone">
-                    <input type="number" name="wifi" placeholder="Wifi">
-                    <input type="number" name="cable" placeholder="Cable">
-                    <input type="number" name="streaming" placeholder="Streaming">
-                    <input type="number" name="otherTech" placeholder="Other Expenses"><br><br>
-                </div>
-
-                <!-- transportation expenses -->
-                <div class="category">
+                    <table class="table table-hover">
+                        <tr>
+                            <td width="90%">Dining Out</td>
+                            <td><input type="number" name="dining"></td>
+                        </tr>
+                        <tr>
+                            <td>Salon</td>
+                            <td><input type="number" name="salon"></td>
+                        </tr>
+                        <tr>
+                            <td>Clothing</td>
+                            <td><input type="number" name="clothing"></td>
+                        </tr>
+                        <tr>
+                            <td>Events & Tickets</td>
+                            <td><input type="number" name="events"></td>
+                        </tr>
+                        <tr>
+                            <td>Vacation</td>
+                            <td><input type="number" name="vacation"></td>
+                        </tr>
+                        <tr>
+                            <td>Other Personal Expenses</td>
+                            <td><input type="number" name="otherPersonal"></td>
+                        </tr>
+                    </table> <br>
+        
+                    <h3>Technology Expenses</h3>
+                    <table class="table table-hover">
+                        <tr>
+                            <td width="90%">Phone bill</td>
+                            <td><input type="number" name="phone"></td>
+                        </tr>
+                        <tr>
+                            <td>Wifi</td>
+                            <td><input type="number" name="wifi"></td>
+                        </tr>
+                        <tr>
+                            <td>Cable</td>
+                            <td><input type="number" name="cable"></td>
+                        </tr>
+                        <tr>
+                            <td>Streaming</td>
+                            <td><input type="number" name="streaming"></td>
+                        </tr>
+                        <tr>
+                            <td>Other Tech Expenses</td>
+                            <td><input type="number" name="otherTech"></td>
+                        </tr>
+                    </table> <br>
+        
                     <h3>Transportation Expenses</h3>
-                </div>
-                <div class="inputs">
-                    <input type="number" name="car" placeholder="Car">
-                    <input type="number" name="fuel" placeholder="Fuel">
-                    <input type="number" name="public" placeholder="Public Transportation">
-                    <input type="number" name="taxi" placeholder="Taxi, Uber, Lyft">
-                    <input type="number" name="otherTrans" placeholder="Other Expenses"><br><br>
-                </div>
-
-                <!-- health expenses -->
-                <div class="category">
+                    <table class="table table-hover">
+                        <tr>
+                            <td width="90%">Car</td>
+                            <td><input type="number" name="car"></td>
+                        </tr>
+                        <tr>
+                            <td>Fuel</td>
+                            <td><input type="number" name="fuel"></td>
+                        </tr>
+                        <tr>
+                            <td>Public Transportation</td>
+                            <td><input type="number" name="public"></td>
+                        </tr>
+                        <tr>
+                            <td>Taxi, Uber, Lyft</td>
+                            <td><input type="number" name="taxi"></td>
+                        </tr>
+                        <tr>
+                            <td>Other Transportation Expenses</td>
+                            <td><input type="number" name="otherTrans"></td>
+                        </tr>
+                    </table> <br>
+        
                     <h3>Health Expenses</h3>
-                </div>
-                <div class="inputs">
-                    <input type="number" name="insurance" placeholder="Insurance">
-                    <input type="number" name="pharmacy" placeholder="Pharmacy">
-                    <input type="number" name="gym" placeholder="Gym or Health Club Dues">
-                    <input type="number" name="otherHealth" placeholder="Other Expenses"><br><br>
+                    <table class="table table-hover">
+                        <tr>
+                            <td width="90%">Insurance</td>
+                            <td><input type="number" name="insurance"></td>
+                        </tr>
+                        <tr>
+                            <td>Pharmacy</td>
+                            <td><input type="number" name="pharmacy"></td>
+                        </tr>
+                        <tr>
+                            <td>Gym or Health Club Dues</td>
+                            <td><input type="number" name="gym"></td>
+                        </tr>
+                        <tr>
+                            <td>Other Health Expenses</td>
+                            <td><input type="number" name="otherHealth"></td>
+                        </tr>
+                    </table>
+
                 </div>
 
-                <!-- submit new info -->
-                <input type="submit" value="ADD MONTH">
+                <!-- submit new -->
+                <button type="submit" class="btn btn-outline-primary">SUBMIT</button>
 
             </form>
         </div>
