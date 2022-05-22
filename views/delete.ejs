@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- ============ head ============ -->
+    <%- include ('./partials/head.ejs') %>
+</head>
+  <body>
+    <div class="container">
+        <nav class="navbar fixed-top navbar-expand-lg bg-light">
+            <!-- ============ nav ============ -->
+           <%- include ('./partials/nav.ejs') %>
+        </nav><br><br><br><br>
+        <div class="row">
+            <div class="col-sm-4"><%=budget.month%> <%=budget.year%> </div>
+            <div class="col-sm-8">
+            </div>
+        </div><br>
+        <div class="new">
+            <form action="/<%=budget.id%>?_method=PUT" method="POST">
+                <!-- basic info -->
+                <div class="category">
+                    <h3>Basic Information</h3>
+                </div>
+                <div class="inputs">
+                    <div class="six columns">
+                        <label for="exampleRecipientInput">Month:</label>
+                            <select name="month" class="u-full-width" id="exampleRecipientInput" value="<%=budget.month%>">
+                                <option value="January">January</option>
+                                <option value="February">February</option>
+                                <option value="March">March</option>
+                                <option value="April">April</option>
+                                <option value="May">May</option>
+                                <option value="June">June</option>
+                                <option value="July">July</option>
+                                <option value="August">August</option>
+                                <option value="September">September</option>
+                                <option value="October">October</option>
+                                <option value="November">November</option>
+                                <option value="December">December</option>
+                            </select> <br>
+                        Year: <input type="number" name="year" value="<%=budget.year%>">
+                    </div>
+                </div> <br>
+
+                <!-- income -->
+                <div class="category">
+                    <h3>Earnings</h3>
+                </div>
+                <div class="inputs">
+                    Income: <input type="number" name="income" value="<%=budget.income%>">
+                    Commissions: <input type="number" name="commissions" value="<%=budget.commissions%>">
+                    Bonus:<input type="number" name="bonus" value="<%=budget.bonus%>">
+                    Gifts:<input type="number" name="gifts" value="<%=budget.gifts%>">
+                    Other Income:<input type="number" name="otherIncome" value="<%=budget.otherIncome%>"><br><br>
+                </div>
+
+                <!-- home expenses -->
+                <div class="category">
+                    <h3>Home Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="mortgage" value="<%=budget.mortgage%>"><br>
+                    <input type="number" name="rent" value="<%=budget.rent%>"><br>
+                    <input type="number" name="utilities" value="<%=budget.utilities%>"><br>
+                    <input type="number" name="maintenance" value="<%=budget.maintenance%>">
+                    <input type="number" name="improvements" value="<%=budget.improvements%>">
+                    <input type="number" name="otherHome" value="<%=budget.otherHome%>">
+                </div>
+
+                <!-- living expenses -->
+                <div class="category">
+                    <h3>Living Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="groceries" value="<%=budget.groceries%>">
+                    <input type="number" name="laundry" value="<%=budget.laundry%>">
+                    <input type="number" name="medical" value="<%=budget.medical%>">
+                    <input type="number" name="otherLiving" value="<%=budget.otherLiving%>">
+                </div>
+
+                <!-- personal expenses -->
+                <div class="category">
+                    <h3>Personal Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="dining" value="<%=budget.dining%>">
+                    <input type="number" name="salon" value="<%=budget.salon%>">
+                    <input type="number" name="clothing" value="<%=budget.clothing%>">
+                    <input type="number" name="events" value="<%=budget.events%>">
+                    <input type="number" name="vacation" value="<%=budget.vacation%>">
+                    <input type="number" name="otherPersonal" value="<%=budget.otherPersonal%>"><br><br>
+                </div>
+
+                <!-- tech expenses -->
+                <div class="category">
+                    <h3>Tech Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="phone" value="<%=budget.phone%>">
+                    <input type="number" name="wifi" value="<%=budget.wifi%>">
+                    <input type="number" name="cable" value="<%=budget.cable%>">
+                    <input type="number" name="streaming" value="<%=budget.streaming%>">
+                    <input type="number" name="otherTech" value="<%=budget.otherTech%>">
+                </div>
+
+                <!-- transportation expenses -->
+                <div class="category">
+                    <h3>Transportation Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="car" value="<%=budget.car%>">
+                    <input type="number" name="fuel" value="<%=budget.fuel%>">
+                    <input type="number" name="public" value="<%=budget.public%>">
+                    <input type="number" name="taxi" value="<%=budget.taxi%>">
+                    <input type="number" name="otherTrans" value="<%=budget.otherTrans%>">
+                </div>
+
+                <!-- health expenses -->
+                <div class="category">
+                    <h3>Health Expenses</h3>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="insurance" value="<%=budget.insurance%>">
+                    <input type="number" name="pharmacy" value="<%=budget.pharmacy%>">
+                    <input type="number" name="gym" value="<%=budget.gym%>">
+                    <input type="number" name="otherHealth" value="<%=budget.otherHealth%>">
+                </div>
+
+                <!-- submit new info -->
+                <input type="submit" value="UPDATE">
+
+            </form>
+        </div>
+
+        <!-- ============ JS CDN ============ -->
+        <%- include ('./partials/cdn.ejs') %>
+    </div>
+  </body>
+</html>

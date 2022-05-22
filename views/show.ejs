@@ -24,10 +24,9 @@
         <div class="budgetContainer">
             <h2>Income</h2>
             <h3>Earnings</h3>
-            <div class="income card">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td>Income</td>
+                    <td width="90%">Income</td>
                     <td><%=budget.income%></td>
                 </tr>
                 <tr>
@@ -46,15 +45,13 @@
                     <td>Other Income</td>
                     <td><%=budget.otherIncome%></td>
                 </tr>
-            </table>
-            </div> <br> <br>
+            </table> <br> <br>
 
             <h2>Expenses</h2>
             <h3>Home Expenses</h3>
-            <div class="exp card">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td>Mortgage</td>
+                    <td width="90%">Mortgage</td>
                     <td><%=budget.mortgage%></td>
                 </tr>
                 <tr>
@@ -77,14 +74,12 @@
                     <td>Other Home Expenses</td>
                     <td><%=budget.otherHome%></td>
                 </tr>
-            </table>
-            </div><br>
+            </table> <br>
 
             <h3>Living Expenses</h3>
-            <div class="exp card">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td>Groceries</td>
+                    <td width="90%">Groceries</td>
                     <td><%=budget.groceries%></td>
                 </tr>
                 <tr>
@@ -99,14 +94,12 @@
                     <td>Other Living Expenses</td>
                     <td><%=budget.otherLiving%></td>
                 </tr>
-            </table>
-            </div><br>
+            </table> <br>
 
             <h3>Personal Expenses</h3>
-            <div class="exp card">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td>Dining Out</td>
+                    <td width="90%">Dining Out</td>
                     <td><%=budget.dining%></td>
                 </tr>
                 <tr>
@@ -129,14 +122,12 @@
                     <td>Other Personal Expenses</td>
                     <td><%=budget.otherPersonal%></td>
                 </tr>
-            </table>
-            </div><br>
+            </table><br>
 
             <h3>Technology Expenses</h3>
-            <div class="exp card">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td>Phone bill</td>
+                    <td width="90%">Phone bill</td>
                     <td><%=budget.phone%></td>
                 </tr>
                 <tr>
@@ -155,14 +146,12 @@
                     <td>Other Tech Expenses</td>
                     <td><%=budget.otherTech%></td>
                 </tr>
-            </table>
-            </div><br>
+            </table><br>
 
             <h3>Transportation Expenses</h3>
-            <div class="exp card">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td>Car</td>
+                    <td width="90%">Car</td>
                     <td><%=budget.car%></td>
                 </tr>
                 <tr>
@@ -181,14 +170,12 @@
                     <td>Other Transportation Expenses</td>
                     <td><%=budget.otherTrans%></td>
                 </tr>
-            </table>
-            </div><br>
+            </table><br>
 
             <h3>Health Expenses</h3>
-            <div class="exp card">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td>Insurance</td>
+                    <td width="90%">Insurance</td>
                     <td><%=budget.insurance%></td>
                 </tr>
                 <tr>
@@ -203,8 +190,8 @@
                     <td>Other Health Expenses</td>
                     <td><%=budget.otherHealth%></td>
                 </tr>
-            </table>
-            </div><br>
+            </table><br>
+
         </div>
         <div class="btn-container">
             <form action="/<%=budget.id%>?_method=DELETE" method="POST">
