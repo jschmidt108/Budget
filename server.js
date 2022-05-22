@@ -105,13 +105,13 @@ app.get('/new', (req, res) => {
 });
 
 // EDIT => GET
-// app.get('/edit/:id', (req, res) => {
-//     Budget.findById(req.params.id, (err, foundBudget) => {
-//         res.render('edit.ejs', {
-//             budget: foundBudget
-//         });
-//     });
-// });
+app.get('/edit/:id', (req, res) => {
+    Budget.findById(req.params.id, (err, foundBudget) => {
+        res.render('edit.ejs', {
+            budget: foundBudget
+        });
+    });
+});
 
 // SHOW => GET
 app.get('/:id', (req, res) => {
@@ -123,14 +123,14 @@ app.get('/:id', (req, res) => {
 });
 
 
-
 // UPDATE => PUT
-// app.put('/:id', (req, res) => {
-//     Budget.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedBudget) => {
-//         // console.log(updatedBudget)
-//         res.redirect('/')
-//     });
-// });
+app.put('/:id', (req, res) => {
+    Budget.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedBudget) => {
+        // console.log(updatedBudget)
+        res.redirect('/')
+    });
+});
+
 
 // DESTROY => DELETE
 app.delete('/:id', (req, res) => {
