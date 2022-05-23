@@ -4,6 +4,15 @@ h1 {
     display: inline-block;
 }
 
+
+h2 {
+    color: #0d6dfdab
+}
+
+tr:hover {
+    background-color: #0d6dfd23
+}
+
 h3 {
     font-size: 1.2em;
 }
@@ -47,7 +56,7 @@ header {
 .monthly {
     color: white;
     /* background-color: #b3c2bf; */
-    background-color: #e5e6ec;
+    background-color: #e8ebfab2;
     padding: .5em;
     margin: .3em;
     flex-basis: 1em;
